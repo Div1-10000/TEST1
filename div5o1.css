@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+
+  /* Enhanced multi-layer gradient */
+  background:
+    radial-gradient(circle at top right, rgba(0, 255, 255, 0.15), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(0, 150, 255, 0.2), transparent 45%),
+    linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #f5faff;
+  letter-spacing: 0.3px;
+
+  /* Smooth text rendering */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.admin-container {
+  width: 90%;
+  max-width: 900px;
+  padding: 35px;
+
+  /* Glass effect */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 22px;
+
+  /* Soft glowing border */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  /* Deep shadow for floating effect */
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.65),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+  color: #f5faff;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Subtle hover lift */
+.admin-container:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.8),
+    inset 0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    90deg,
+    #00c6ff,
+    #00f2fe,
+    #6ee7ff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 4px 15px rgba(0, 198, 255, 0.35),
+    0 0 30px rgba(0, 242, 254, 0.2);
+
+  position: relative;
+}
+
+/* Elegant glowing underline */
+h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 14px auto 0;
+
+  background: linear-gradient(90deg, #00c6ff, #00f2fe);
+  border-radius: 50px;
+
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+}
+
+/* ===== TABLE CONTAINER ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== TABLE HEAD & DATA ===== */
+th, td {
+  padding: 14px 18px;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* ===== TABLE HEADER ===== */
+th {
+  background: linear-gradient(135deg, rgba(0,198,255,0.35), rgba(0,114,255,0.35));
+  color: #00c6ff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ===== TABLE BODY ===== */
+td {
+  color: #eaeaea;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===== ROW STYLING ===== */
+tr:nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+
+tr:hover {
+  background: rgba(0,198,255,0.12);
+  transition: background 0.3s ease;
+}
+
+/* ===== FIRST & LAST COLUMN RADIUS FIX ===== */
+tr:first-child th:first-child {
+  border-top-left-radius: 14px;
+}
+
+tr:first-child th:last-child {
+  border-top-right-radius: 14px;
+}
+
+/* ===== ACTION BUTTON (DELETE / VIEW / EDIT) ===== */
+.action-btn {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 0, 0, 0.15);
+  color: #ff4d4d;
+  font-size: 14px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: rgba(255, 0, 0, 0.35);
+  transform: scale(1.1);
+}
+
+/* ===== NO DATA TEXT ===== */
+.no-data {
+  padding: 25px;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* ===== DELETE BUTTON ===== */
+.delete-btn {
+  cursor: pointer;
+  font-size: 20px;
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.15);
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(255, 77, 77, 0.0);
+}
+
+.delete-btn:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #ff4d4d, #ff1a1a);
+  transform: scale(1.25) rotate(-8deg);
+  box-shadow: 0 8px 25px rgba(255, 77, 77, 0.6);
+}
+
+.delete-btn:active {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 77, 77, 0.8);
+}
+
+/* ===== EMPTY MESSAGE ===== */
+#emptyMsg {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 16px;
+  color: #bbb;
+  display: none;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* ===== EMPTY ICON OPTIONAL ===== */
+#emptyMsg::before {
+  content: "📭";
+  display: block;
+  font-size: 28px;
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+
+/* ===== FADE IN ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

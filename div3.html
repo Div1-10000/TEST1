@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - TMA</title>
+  <link rel="stylesheet" href="div3.css">
+  <link rel="stylesheet" href="div11.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">TARUN MOBILE ACCESSORIES</div>
+      <ul class="nav-links">
+        <li><a href="div0.html">Shop</a></li>
+        <li><a href="div3.html" class="active">Services</a></li>
+      </ul>
+    </div>
+  </nav>
+
+   <section class="services">
+    <div class = "sev1">
+      <h1>Password-Unlock</h1>
+      <p>Secure Mobile Unlock Service</p>
+      <button onclick="openModal('Quick PIN Reset', 'Rs. 199', 'lock.jpg', 'Fast PIN removal for Samsung/Realme/Xiaomi — same-day service')">Apply Now</button>
+    </div>
+    <div class = "sev2">
+      <h1>Mobile-Repairing</h1>
+      <p>Bring Phones Back Alive</p>
+      <button onclick="openModal('Software Flashing', 'Rs. 499', 'repair1.jpg', 'Fix hanging, bootloop, or restart issues with OS reinstallation')">Apply Now</button>
+    </div>
+    <div class = "sev3">
+      <h1>Folder Repairing</h1>
+      <p>Expert Mobile Repair Near You</p>
+      <button onclick="openModal('Folder Change (Display Flex)', 'Rs. 899', 'repair.jpg', 'Replace broken or damaged display folder — original quality guaranteed')">Apply Now</button>
+    </div>
+    <div class = "sev4">
+      <h1>Board-Maintenance</h1>
+      <p>Expert Board Maintenance Solutions</p>
+      <button onclick="openModal('Motherboard Repair', 'Rs. 1,499', 'maintanance.jpg', 'Board-level repair for dead or shorted devices')">Apply Now</button>
+    </div>
+    <div class = "sev5">
+      <h1>Change-Temper</h1>
+      <p>Protect Your Screen Again</p>
+      <button onclick="openModal('Tempered Glass Change', 'Rs. 99', 'temper1.jpeg', 'Scratch or crack on screen? Get new tempered glass fitted instantly')">Apply Now</button>
+    </div>
+  </section>
+  <section class = "services1">
+    <div class = "sev21">
+      <h1>Display-Change</h1>
+      <button onclick="openModal('AMOLED Display Change', 'Rs. 2,499', 'display.jpg', 'Original AMOLED display replacement for Samsung, Vivo, Oppo & more')">Apply Now</button>
+    </div>
+    <div class = "sev22">
+      <h1>Body Change</h1>
+      <button onclick="openModal('Full Body Replacement', 'Rs. 1,299', 'body.webp', 'Replace old or damaged mobile body with original-quality casing')">Apply Now</button>
+    </div>
+    <div class = "sev23">
+      <h1>Battery Change</h1>
+      <button onclick="openModal('Standard Battery Replacement', 'Rs. 499', 'battery.avif', 'Replace old or drained battery with genuine or high-quality alternative')">Apply Now</button>
+    </div>
+    <div class = "sev24">
+      <h1>Middle Change</h1>
+      <button onclick="openModal('Middle Frame Replacement', 'Rs. 799', 'middle.avif', 'Replace damaged or bent middle frame for perfect phone alignment')">Apply Now</button>
+    </div>
+    <div class = "sev25">
+      <h1>Camera Change</h1>
+      <button onclick="openModal('Front Camera Replacement', 'Rs. 499', 'camera.webp', 'Replace broken or malfunctioning front camera — all brands supported')">Apply Now</button>
+    </div>
+  </section>
+
+  <!-- === Modal (Popup) === -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="productName">Product Name</h2>
+      <div class="product-image" id="productImage"></div>
+      <p><strong>Price:</strong> <span id="productPrice">$0</span></p>
+      <p><strong>Features:</strong> <span id="productFeatures">Features here</span></p>
+      <button id="buyNow" onclick="saveBooking()">Buy Now</button>
+
+    </div>
+  </div>
+
+  <button onclick="window.location.href='div0.html'">⬅ Back to Home</button>
+
+  <script src="div3.js"></script>
+
+</body>
+</html>
