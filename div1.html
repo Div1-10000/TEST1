@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - TMA</title>
+  <link rel="stylesheet" href="div1.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">TARUN MOBILE ACCESSORIES</div>
+      <ul class="nav-links">
+        <li><a href="div0.html">Shop</a></li>
+        <li><a href="div1.html" class="active">Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="shop-products-2">
+    <div class="product-2">
+      <h1>Apple-Section</h1>
+      <p>Elegance Meets Ultimate Performance</p>
+      <button onclick="showComingSoon(this)">Add to Cart</button>
+      <p class="coming-soon" style="display:none;">Coming Soon!!</p>
+    </div>
+  </section>
+
+  <section class="shop-products">
+    <div class="product">
+      <h1>Android-Section</h1>
+      <p>Next-Gen Power In Hand</p>
+      <button onclick="showComingSoon(this)">Add to Cart</button>
+      <p class="coming-soon" style="display:none;">Coming Soon!!</p>
+    </div>
+  </section>
+
+  <button onclick="window.location.href='div0.html'">⬅ Back to Home</button>
+
+</body>
+<script>
+  function showComingSoon(btn) {
+    const msg = btn.nextElementSibling; // selects the <p> after the button
+    msg.style.display = 'block';
+  }
+</script>
+</html>

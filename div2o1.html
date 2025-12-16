@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - TMA</title>
+  <link rel="stylesheet" href="div2o1.css">
+  <link rel="stylesheet" href="div11.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">TARUN MOBILE ACCESSORIES</div>
+      <ul class="nav-links">
+        <li><a href="div2.html">Accessories</a></li>
+        <li><a href="div2o1.html" class="active">Tech-gear</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- === MAIN SECTION === -->
+  <section class="Tech-gear">
+    <div class="tech">
+      <div class="sec1">
+        <h1>5G The Lightning Data</h1>
+        <p>Experience the Future Speed</p>
+        <button onclick="openModal('5G The Lightning Data', 'Rs. 450', 'sec1.webp', 'High-speed 4G, 2GB/day, 30 days validity')">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- === PRODUCT GRID === -->
+  <section class="Tech-gear1">
+    <div class="sec21">
+      <h2>Mobile Tempered Glass</h2>
+      <button onclick="openModal('Mobile Tempered Glass', 'Rs. 150', 'glass.jpg', 'Scratch resistant, ultra-clear')">Buy</button>
+    </div>
+    <div class="sec22">
+      <h2>Mobile Cover</h2>
+      <button onclick="openModal('Mobile Cover', 'Rs. 250', 'cover.jpg', 'Shockproof, stylish fit')">Buy</button>
+    </div>
+    <div class="sec23">
+      <h2>Charger</h2>
+      <button onclick="openModal('Charger', 'Rs. 350', 'charger.jpg', 'Fast charging 25W')">Buy</button>
+    </div>
+    <div class="sec24">
+      <h2>Battery</h2>
+      <button onclick="openModal('Battery', 'Rs. 800', 'battery.jpg', '4000mAh long-lasting power')">Buy</button>
+    </div>
+    <div class="sec25">
+      <h2>Speaker Charger</h2>
+      <button onclick="openModal('Speaker Charger', 'Rs. 500', 'speaker.jpg', 'Stereo output, clear sound')">Buy</button>
+    </div>
+    <div class="sec26">
+      <h2>Jack Charger</h2>
+      <button onclick="openModal('Jack Charger', 'Rs. 299', 'jack.jpg', 'Durable & fast connectivity')">Buy</button>
+    </div>
+  </section>
+
+  <!-- === Modal (Popup) === -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="productName">Product Name</h2>
+      <div class="product-image" id="productImage"></div>
+      <p><strong>Price:</strong> <span id="productPrice">$0</span></p>
+      <p><strong>Features:</strong> <span id="productFeatures">Features here</span></p>
+      <button id="buyNow" onclick="window.location.href = 'divpay.html'">Buy Now</button>
+    </div>
+  </div>
+
+  <button onclick="window.location.href='div2.html'">⬅ Back to Home</button>
+
+  <script src="div2o1.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - Productivity Enhancer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbot-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>Productivity Enhancer</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#productivity" class="nav-link">Productivity</a></li>
+                <li><a href="index.html#finance" class="nav-link">Finance</a></li>
+                <li><a href="chatbot.html" class="nav-link active">AI Assistant</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-robot"></i>
+                AI Productivity Coach
+            </h2>
+            <p class="section-subtitle">Chat with your personal AI assistant powered by Google Gemini</p>
+
+            <div class="chatbot-container">
+                <!-- Chat Window -->
+                <div class="chat-window" id="chatWindow">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>👋 Hello! I'm your AI productivity coach. I can help you:</p>
+                                <ul>
+                                    <li>Analyze your productivity habits</li>
+                                    <li>Give personalized financial advice</li>
+                                    <li>Answer questions about wellness and time management</li>
+                                    <li>Parse natural language input (e.g., "I slept 7 hours")</li>
+                                </ul>
+                                <p>How can I assist you today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Typing Indicator -->
+                    <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="chat-input-container">
+                    <div class="quick-actions">
+                        <button class="quick-btn" onclick="sendQuickMessage('How can I improve my productivity?')">
+                            <i class="fas fa-chart-line"></i> Improve Productivity
+                        </button>
+                        <button class="quick-btn" onclick="sendQuickMessage('Give me financial advice')">
+                            <i class="fas fa-wallet"></i> Financial Tips
+                        </button>
+                        <button class="quick-btn" onclick="sendQuickMessage('How much sleep do I need?')">
+                            <i class="fas fa-bed"></i> Sleep Advice
+                        </button>
+                        <button class="quick-btn" onclick="clearChat()">
+                            <i class="fas fa-trash"></i> Clear Chat
+                        </button>
+                    </div>
+                    
+                    <form class="chat-input-form" id="chatForm">
+                        <input 
+                            type="text" 
+                            id="chatInput" 
+                            placeholder="Type your message or try: 'I slept 7 hours and exercised 30 minutes'..."
+                            autocomplete="off"
+                            required
+                        >
+                        <button type="submit" class="send-btn" id="sendBtn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Natural Language Parser -->
+                <div class="nlp-section">
+                    <h3><i class="fas fa-magic"></i> Natural Language Input</h3>
+                    <p>Try saying things like: "I slept 7 hours, exercised 30 minutes, and worked 8 hours"</p>
+                    <form id="nlpForm">
+                        <div class="nlp-input-group">
+                            <input 
+                                type="text" 
+                                id="nlpInput" 
+                                placeholder="Describe your day in natural language..."
+                                autocomplete="off"
+                            >
+                            <select id="nlpType">
+                                <option value="productivity">Productivity</option>
+                                <option value="finance">Finance</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-wand-magic-sparkles"></i> Parse
+                            </button>
+                        </div>
+                    </form>
+                    <div id="nlpResult" class="nlp-result" style="display: none;"></div>
+                </div>
+            </div>
+
+            <!-- API Status -->
+            <div class="api-status" id="apiStatus">
+                <i class="fas fa-circle"></i> <span id="statusText">Checking API connection...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Productivity Enhancer. Powered by Google Gemini AI & Machine Learning.</p>
+        </div>
+    </footer>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - TMA</title>
+  <link rel="stylesheet" href="div2o2.css">
+  <link rel="stylesheet" href="div11.css">
+</head>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">TARUN MOBILE ACCESSORIES</div>
+      <ul class="nav-links">
+        <li><a href="div2.html">Accessories</a></li>
+        <li><a href="div2o2.html" class="active">Sound</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="Sound-gear1">
+    <div class="tech">
+      <div class = "sec1">
+        <h1>Head-phone</h1>
+        <p>Feel Every Beat Insider</p>
+        <button onclick="openModal('Headphones', 'Rs. 750', 'headphone.jpg', 'Deep bass, noise cancellation')">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+   <section class="Sound-gear2">
+    <div class = "sec2">
+      <h1>Boats</h1>
+      <p>Experience Music Like Never Before</p>
+      <button onclick="openModal('Boat Headphones', 'Rs. 899', 'boat2.jpg', 'Powerful bass, clear sound, comfortable fit')">Buy Now</button>
+    </div>
+    <div class = "sec3">
+      <h1>Neck-Band</h1>
+      <p>Unleash the Power of Sound</p>
+      <button onclick="openModal('Boat Neckband', 'Rs. 1099', 'neck1.webp', 'Bluetooth 5.0, deep bass, long battery life')">Buy Now</button>
+    </div>
+    <div class = "sec4">
+      <h1>Speaker</h1>
+      <p>Crystal Clear Wireless Beats</p>
+      <button onclick="openModal('Boat Speaker', 'Rs. 1499', 'sound.jpg', '360° sound, waterproof, deep bass')">Buy Now</button>
+    </div>
+    <div class = "sec5">
+      <h1>Earphone</h1>
+      <p>Feel the Music Freedom</p>
+      <button onclick="openModal('Boat Earphone', 'Rs. 499', 'lead.jpg!d', 'HD sound, tangle-free cable, built-in mic')">Buy Now</button>
+    </div>
+  </section>
+
+   <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="productName">Product Name</h2>
+      <div class="product-image" id="productImage"></div>
+      <p><strong>Price:</strong> <span id="productPrice">$0</span></p>
+      <p><strong>Features:</strong> <span id="productFeatures">Features here</span></p>
+      <button id="buyNow" onclick="window.location.href = 'divpay.html'">Buy</button>
+    </div>
+  </div>
+
+  <button onclick="window.location.href='div2.html'">⬅ Back to Home</button>
+
+  <script src="div1.js"></script>
+
+</body>
+</html>
