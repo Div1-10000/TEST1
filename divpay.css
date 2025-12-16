@@ -1,0 +1,82 @@
+/* ===== Global Styles ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===== Container ===== */
+/* Modal background */
+.payment-modal {
+    background: transparent; /* keeps background visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+
+/* Payment container */
+.payment-container {
+    position: relative;
+    text-align: center;
+    background: #111;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 170, 255, 0.5);
+    width: 350px;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #00aaff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.close-btn:hover { color: #00c3ff; }
+
+/* Tick animation */
+.tick-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #00aaff;
+    margin: 0 auto 20px auto;
+    position: relative;
+    animation: pop 0.5s ease forwards;
+}
+.tick {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    border-left: 5px solid #00aaff;
+    border-bottom: 5px solid #00aaff;
+    transform: rotate(-45deg);
+    top: 25px;
+    left: 20px;
+    opacity: 0;
+    animation: draw 0.5s 0.5s forwards;
+}
+
+/* Animations */
+@keyframes pop { 0% { transform: scale(0); } 100% { transform: scale(1); } }
+@keyframes draw { 0% { opacity: 0; height: 0; width: 0; } 100% { opacity: 1; height: 25px; width: 50px; } }
+
+h1 { color: #00aaff; margin-bottom: 10px; }
+p { color: #e0e0e0; margin-bottom: 30px; }
+
